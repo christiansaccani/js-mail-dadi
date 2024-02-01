@@ -21,7 +21,13 @@ userThrowBtn.addEventListener("click",
         computerResult = getRandomInt(1, 6);
         console.log("Risultato Computer:", computerResult);
 
-       
+        if (userResult > computerResult) {
+            console.log("L'utente ha vinto");
+        } else if (userResult < computerResult) {
+            console.log("Il computer ha vinto");
+        } else {
+            console.log("Pareggio");
+        }
 
 
 
