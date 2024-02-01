@@ -8,34 +8,40 @@ let computerResult;
 userThrowBtn.addEventListener("click",
     function (event) {
         event.preventDefault();   //To block auto-refresh
-        console.log("Invio Click");
+
+        // Risultati Utente
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
         userResult = getRandomInt(1, 6);
 
-        const newElementUser = document.createElement("div");
-        newElementUser.innerText = ("Il tuo risultato: " + userResult);
-        containerElement.append(newElementUser);
+        document.querySelector("#userline").innerText =
+        "Il tuo risultato: " + userResult;
 
-        console.log("Risultato Utente:", userResult);
-
-
-
+        // Risultati Computer
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
         computerResult = getRandomInt(1, 6);
-        console.log("Risultato Computer:", computerResult);
+        
+        document.querySelector("#computerline").innerText =
+        "Computer: " + computerResult;
+
+        // Risultati dei lanci
 
         if (userResult > computerResult) {
-            console.log("L'utente ha vinto");
+            document.querySelector("#resultline").innerText =
+            "Hai Vinto!"
+
         } else if (userResult < computerResult) {
-            console.log("Il computer ha vinto");
+            document.querySelector("#resultline").innerText =
+            "Hai Perso."
+
         } else {
-            console.log("Pareggio");
+            document.querySelector("#resultline").innerText =
+            "Incredibilmente un Pareggio! (era meno probabile di vincere, complimenti!)"
         }
 
 
