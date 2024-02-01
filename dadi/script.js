@@ -2,6 +2,8 @@ const userThrowBtn = document.querySelector("#UserThrow");
 let userResult;
 let computerResult;
 
+// Lancio dei dadi
+
 userThrowBtn.addEventListener("click",
     function (event) {
         event.preventDefault();   //To block auto-refresh
