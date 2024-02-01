@@ -1,4 +1,5 @@
 const userThrowBtn = document.querySelector("#UserThrow");
+const containerElement = document.querySelector("#container");
 let userResult;
 let computerResult;
 
@@ -13,7 +14,15 @@ userThrowBtn.addEventListener("click",
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
         userResult = getRandomInt(1, 6);
+
+        const newElementUser = document.createElement("div");
+        newElementUser.innerText = ("Il tuo risultato: " + userResult);
+        containerElement.append(newElementUser);
+
         console.log("Risultato Utente:", userResult);
+
+
+
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
