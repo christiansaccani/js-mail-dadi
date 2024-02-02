@@ -23,7 +23,7 @@ searchBtn.addEventListener("click",
             }
         }
 
-        if (signedMail == true) {
+        if (signedMail) {
             console.log("Login Effettuato");
             document.querySelector('#resultline').innerText =
             "Questo indirizzo risulta registrato, Bentornato!";
