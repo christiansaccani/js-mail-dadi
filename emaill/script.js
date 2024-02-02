@@ -10,14 +10,9 @@ for (let i=0; i<10; i++) {
     emailRegistrate.push("email" + i +"@boolean.com")
 }
 
-console.log(emailRegistrate);
-
-console.log(emailRegistrate[2]);
-
 searchBtn.addEventListener("click",
     function (event) {
         event.preventDefault(); 
-        console.log("clicked");
 
         userMail = document.getElementById("emailfill").value;
 
@@ -25,7 +20,6 @@ searchBtn.addEventListener("click",
 
             if (userMail === emailRegistrate[i]) {
                 signedMail = true;
-                console.log("email corrispondente");
             }
         }
 
@@ -36,6 +30,8 @@ searchBtn.addEventListener("click",
 
             document.querySelector('#resultline').style.backgroundColor = "green";
             document.querySelector('#resultline').style.color = "white";
+
+            signedMail = false;
 
         } else {
             console.log("Login non possibile");
@@ -48,3 +44,4 @@ searchBtn.addEventListener("click",
         }
     }
 )
+
